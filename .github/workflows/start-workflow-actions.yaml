@@ -7,8 +7,9 @@ on:
     tags:
       - 'v*'
     steps:
-      - name: Snyk
-        uses: snyk/actions@0.3.0
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 jobs:
