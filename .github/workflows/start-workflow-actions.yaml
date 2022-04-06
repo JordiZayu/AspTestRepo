@@ -6,7 +6,11 @@ on:
       - main
     tags:
       - 'v*'
-
+    steps:
+      - name: Snyk
+        uses: snyk/actions@0.3.0
+          env:
+            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 jobs:
   test:
     name: Run Unit Tests
@@ -38,6 +42,7 @@ jobs:
         with:
           name: apk
           path: app/build/outputs/apk/debug/app-debug.apk
-      - name: Snyk
-        uses: snyk/actions@0.3.0
+
+
+
 
