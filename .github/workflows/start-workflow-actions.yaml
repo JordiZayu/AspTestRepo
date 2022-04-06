@@ -20,6 +20,10 @@ jobs:
           java-version: 11
       - name: Run Tests
         run: bash ./gradlew test --stacktrace  
+  security:
+    name: Synk Tests
+    runs-on: ubuntu-latest
+    steps:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
