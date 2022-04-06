@@ -22,6 +22,7 @@ jobs:
         run: bash ./gradlew test --stacktrace  
   security:
     name: Synk Tests
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Run Snyk to check for vulnerabilities
