@@ -9,8 +9,8 @@ on:
     steps:
       - name: Snyk
         uses: snyk/actions@0.3.0
-          env:
-            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 jobs:
   test:
     name: Run Unit Tests
