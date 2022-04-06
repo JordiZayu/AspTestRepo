@@ -37,4 +37,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: apk
-          path: app/build/outputs/apk/debug/app-debug.apk 
+          path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Snyk
+        uses: snyk/actions@0.3.0
+
